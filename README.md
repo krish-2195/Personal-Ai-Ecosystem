@@ -1,7 +1,7 @@
 # Personal AI Ecosystem 🚀
 *Privacy-first personal assistant with AI agents, voice control, and 20+ life domain coordination. Compresses 5-year data by 85%, saves 15+ hours weekly.*
 
-[![Demo](https://img.shields.io/badge/Live_Demo-🟢_Ready-orange)](http://localhost:8501)
+[![Status](https://img.shields.io/badge/status-prototype-green)](https://github.com)
 [![Python](https://img.shields.io/badge/python-3.10%2B-blue)](https://python.org) 
 [![FastAPI](https://img.shields.io/badge/FastAPI-0.115.0-yellow)](https://fastapi.tiangolo.com)
 

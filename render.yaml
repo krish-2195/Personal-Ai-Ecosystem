@@ -1,0 +1,39 @@
+services:
+  - type: web
+    name: personal-ai-backend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn backend.main:app --host 0.0.0.0 --port 8000
+    healthCheckPath: /health
+    autoDeploy: true
+    envVars:
+      - key: APP_ENV
+        value: render
+      - key: API_HOST
+        value: 0.0.0.0
+      - key: API_PORT
+        value: 8000
+      - key: OLLAMA_BASE_URL
+        value: http://localhost:11434
+      - key: OLLAMA_MODEL
+        value: llama3.1:8b
+      - key: MONGO_URI
+        value: mongodb://localhost:27017/personal_ai
+      - key: NEO4J_URI
+        value: bolt://localhost:7687
+      - key: NEO4J_USER
+        value: neo4j
+      - key: NEO4J_PASSWORD
+        value: changeme
+
+  - type: web
+    name: personal-ai-frontend
+    env: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: streamlit run frontend/app.py --server.port 10000 --server.address 0.0.0.0
+    autoDeploy: true
+    envVars:
+      - key: API_BASE_URL
+        sync: false

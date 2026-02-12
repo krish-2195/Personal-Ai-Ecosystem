@@ -61,7 +61,7 @@ cp .env.example .env
 
 | Variable | Default | Description | Example |
 |----------|---------|-------------|---------|
-| `MONGO_URI` | mongodb://localhost:27017/personal_ai | MongoDB connection string | mongodb+srv://user:pass@cluster.mongodb.net/personal_ai |
+| `MONGO_URI` | mongodb://localhost:27017/personal_ai | MongoDB connection string | mongodb+srv://<username>:<password>@cluster.mongodb.net/personal_ai |
 | `NEO4J_URI` | bolt://localhost:7687 | Neo4j bolt connection | bolt://localhost:7687 |
 | `NEO4J_USER` | neo4j | Neo4j username | neo4j |
 | `NEO4J_PASSWORD` | changeme | Neo4j password | secure_password |
@@ -72,7 +72,7 @@ cp .env.example .env
 MONGO_URI=mongodb://localhost:27017/personal_ai
 
 # MongoDB Atlas (cloud)
-MONGO_URI=mongodb+srv://user:password@cluster0.mongodb.net/personal_ai?retryWrites=true&w=majority
+MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/personal_ai?retryWrites=true&w=majority
 
 # Docker with authentication
 MONGO_URI=mongodb://db_user:db_pass@localhost:27017/personal_ai?authSource=admin
@@ -138,7 +138,7 @@ API_KEY=prod_key_long_random_string_here
 ADMIN_API_KEY=admin_key_long_random_string_here
 OLLAMA_BASE_URL=https://ollama.example.com  # Or local Ollama in same container
 OLLAMA_MODEL=llama3.1:8b
-MONGO_URI=mongodb+srv://user:password@cluster.mongodb.net/personal_ai
+MONGO_URI=mongodb+srv://<username>:<password>@cluster.mongodb.net/personal_ai
 CORS_ORIGINS=https://your-app.onrender.com
 ```
 
